@@ -1,0 +1,234 @@
+ <!DOCTYPE html>
+<html>
+<style>
+div {
+  background-color: #FFF4A3;
+height: auto;
+overflow-wrap: break-word;
+}
+</style>
+<head>
+<title>Chat STS</title>
+<link rel="icon" type="image/x-icon" href="BrainyBot.ico">
+</head>
+<body style="background-color:slateblue;">
+
+<script>
+function validateForm() {
+  let x = document.getElementById("002").value.toLowerCase();
+  if (x.indexOf("henry") != -1){
+    alert ("Is so super amazing!                                    🙃                                         And Humble.");
+  }
+  else if (x.indexOf("remy") != -1 || x.indexOf("rembrandt") != -1){
+    alert ("eats a lot and like snacks.                                                                                                                -Remy");
+  }
+  else if (x.indexOf("felix") != -1){
+    alert ("Yeah, he's obsessed with Blooket and getting the Rainbow Panda!")
+  }
+  else if (x.indexOf("4a") != -1){
+    alert ("Is very rich when it comes to dojos!")
+  }
+  else if (x.indexOf("mrs naylor") != -1){
+    alert ("is da dojo queeny and is da best teacher ever! i know i haven't used the correct grammar, Mrs. Naylor.") 
+  }
+  else if (x.indexOf("fact") != -1) {
+    document.getElementById("001").innerHTML += 
+    "<br/> Chat STS has chosen this fact for you: " + facts();
+  }
+  else if (x.startsWith("calculate")) {
+    document.getElementById("001").innerHTML += "<br />" + Calculator(x)
+  }
+  else if (x.indexOf("birth of the solar system") != -1){
+    document.getElementById("001").innerHTML+= 
+    "<br/> Everything in the solar system - the Sun, planets, moons, and smaller space occupants - was born inside a vast, spinning cloud. The story began about five billion years ago, with a giant cloud made mostly of hydrogen and dust. The cloud then began to shrink. Eventually our Sun formed right in the smack - bang midddle of the cloud, where it was denser and hotter. The rest of the cloud formed a swirling disk called. . . the solar nebular."
+  }
+  else if (x.indexOf("mercury") != -1){
+    document.getElementById("001").innerHTML+= 
+    "<br/> Mercury is the smallest planet in our solar system. It is also the closest planet to the Sun, so we always see it near the Sun in the sky. This makes it hard to see, exept at sunrise or sunset, because it is hidden by the Sun's glare. Mercury has no moons and is too small to hold on to any atmosphere."
+  }
+  else if (x.indexOf("venus") != -1){
+    document.getElementById("001").innerHTML+= 
+    "<br/> Venus is the most similar planet in the solar system to Earth, although it is closer to the Sun which makes it hotter than Earth. Both planets are simillar in size, mass, and compostion. However, Venus has no water or life, and is covered with a very thick, soffocating atmosphere."
+  }
+  else if (x.indexOf("earth") != -1){
+    document.getElementById("001").innerHTML+= 
+    "<br/> Earth is a uiuque planet - the only world known to support any life. It has liquid water on it's surface and lots of oxygen. The thick atmostsphere protects the surface from radiation and meteorites. Earth's strong magnetic field sheilds us from harmful particles steaming out of the Sun."
+  }
+  else if (x.indexOf("mars") != -1){
+    document.getElementById("001").innerHTML+= 
+    "<br/> After Earth, Mars is the most suitible planet for humans to live on. It's day is only a little over 24 hours long, and it has Earth - like seasons. Mars was named after the roman god of war because of it's blood - red colour, which is caused by rusty iron - rich rocks."
+  }
+  else if (x.indexOf("jupiter") != -1){
+    document.getElementById("001").innerHTML+= 
+    "<br/> Jupiter is the king of the planets. This huge world has more than two and a half times the mass of all the other planets combined. Around 1300 Earths would fit inside this giant world, but because it is mainly made of up of light gases Jupiter weighs only 318 times as much as Earth. "
+  }
+  else if (x.indexOf("saturn") != -1){
+    document.getElementById("001").innerHTML+= 
+    "<br/The second largest planet and sixth from the Sun, Saturn is the most distant planet we can see without a telescope. It's visible for about 10 months of the year, and is surounded by an amazing series of rings (but you will need a telescope to see them). >"
+  }
+  else if (x.indexOf("uranus") != -1){
+    document.getElementById("001").innerHTML+= 
+    "<br/> Urabus is the third largest planet, and the seventh planet from th Sun. At this distance, it receives little heat or light from the Sun, so cloud tops are extremely cold. Each orbit around the Sun takes 84 Earth years, so birthdays are very rare! "
+  }  
+  else if (x.indexOf("neptune") != -1){
+    document.getElementById("001").innerHTML+= 
+    "<br/> The eighth planet from the Sun, Neptune is an icy gas giant 58 times the size of Earth, but only 17 times heavier. It is an extremelycold, dark world - 30 times further from the Sun than Earth it receives 900 times less light and heat than Earth. "
+  }
+  else if (x.indexOf("pluto") != -1){
+    document.getElementById("001").innerHTML+= 
+    "<br/> Cold, icy, and far from the Sun, Pluto is the largest of several dwarf planets in our solar system. It is one of the closest and brightest dwarf planets in the Kuiper Belt, the ring of icy dwarf planets that surround the solar system beyond the orbit of Neptune. "
+  }
+  else {
+    if (PT (x) != false) {
+      document.getElementById("001").innerHTML += "<br />" + PT(x)
+    } else {
+      document.getElementById("001").innerHTML += 
+      "<br/> Chat STS knows absolutely nothing about: " + x;
+    }
+  } 
+document.getElementById("002").value = 
+"" ;
+}
+
+function Calculator(CAL) {
+  CAL = CAL.slice (10)
+  return "Chat STS thinks that "+(CAL)+" =   " + eval (CAL)
+}
+function PT(PTE) {
+  var PTName = ["hydrogen","helium","lithium","beryllium","boron","carbon","nitrogen","oxygen","fluorine","neon","sodium","magnesium","aluminum","silicon","phosphorus","sulfur","chlorine","argon","potassium","calcium","scandium","titanium","vanadium","chromium","manganese","iron","cobalt","nickel","copper","zinc","gallium","germanium","arsenic","selenium","bromine","krypton","rubidium","strontium","yttrium","zirconium","niobium","molybdenum","technetium","ruthenium","rhodium","palladium","silver","cadmium","indium","tin","antimony","tellurium","iodine","xenon","cesium","barium","lanthanum","cerium","praseodymium","neodymium","promethium","samarium","europium","gadolinium","terbium","dysprosium","holmium","erbium","thulium","ytterbium","lutetium","hafnium","tantalum","tungsten","rhenium","osmium","iridium","platinum","gold","mercury","thallium","lead","bismuth","polonium","astatine","radon","francium","radium","actinium","thorium","protactinium","uranium","neptunium","plutonium","americium","curium","berkelium","californium","einsteinium","fermium","mendelevium","nobelium","lawrencium","rutherfordium","dubnium","seaborgium","bohrium","hassium","meitnerium","	darmstadtium","	roentgenium","copernicium","nihonium","flerovium","moscovium","livermorium","tennessine","oganesson"]; 
+var PTSymbol = ["h","he","li","be","b","c","n","o","f","ne","na","mg","al","si","p","s","cl","ar","k","ca","sc","ti","v","cr","mn","fe","co","ni","cu","zn","ga","ge","as","se","br","kr","rb","sr","y","zr","nb","mo","tc","ru","rh","pd","ag","cd","in","sn","sb","te","i","xe","cs","ba","la","ce","pr","nd","pm","sm","eu","gd","tb","dy","ho","er","tm","yb","lu","hf","ta","w","re","os","ir","pt","au","hg","tl","pb","bi","po","at","rn","fr","ra","ac","th","pa","u","np","pu","am","cm","bk","cf","es","fm","md","no","lr","rf","db","sg","bh","hs","mt","ds","rg","cn","nh","fl","mc","lv","ts","og"]; 
+var PTWeight = ["1.0079","4.0026","6.941","9.0122","10.811","12.0107","14.0067","15.9994","18.9984","20.1797","22.9897","24.305","26.9815","28.0855","30.9738","32.065","35.453","39.948","39.0983","40.078","44.9559","47.867","50.9415","51.9961","54.938","55.845","58.9332","58.6934","63.546","65.39","69.723","72.64","74.9216","78.96","79.904","83.8","85.4678","87.62","88.9059","91.224","92.9064","95.94","98","101.07","102.9055","106.42","107.8682","112.411","114.818","118.71","121.76","127.6","126.9045","131.293","132.9055","137.327","138.9055","140.116","140.9077","144.24","145","150.36","151.964","157.25","158.9253","162.5","164.9303","167.259","168.9342","173.04","174.967","178.49","180.9479","183.84","186.207","190.23","192.217","195.078","196.9665","200.59","204.3833","207.2","208.9804","209","210","222","223","226","227","232.0381","231.0359","238.0289","237","244","243","247","247","251","252","257","258","259","262","261","268","269","270.133","269","277.154","281","281","285","286","289","288","293","294","294"];
+if (PTName.indexOf(PTE) != -1){
+  return "Chat STS thinks that "+(PTE)+" has a weight of "+PTWeight[PTName.indexOf(PTE)]+", and it's symbol is "+PTSymbol[PTName.indexOf(PTE)]+"."
+}
+ else return false
+
+}
+function facts() {
+  const facts = [
+    "A cloud weighs around a million tonnes. A cloud typically has a volume of around 1km3 and a density of around 1.003kg per m3 – that's a density that’s around 0.4 per cent lower than the air surrounding it (this is how they are able to float).",
+    "Giraffes are 30 times more likely to get hit by lightning than people. True, there are only five well-documented fatal lightning strikes on giraffes between 1996 and 2010. But due to the population of the species being just 140,000 during this time, it makes for about 0.003 lightning deaths per thousand giraffes each year. This is 30 times the equivalent fatality rate for humans.",
+    "Identical twins don’t have the same fingerprints. You can’t blame your crimes on your twin, after all. This is because environmental factors during development in the womb (umbilical cord length, position in the womb, and the rate of finger growth) impact your fingerprint.",
+    "Earth’s rotation is changing speed. It's actually slowing. This means that, on average, the length of a day increases by around 1.8 seconds per century. 600 million years ago a day lasted just 21 hours.",
+    "Your brain is constantly eating itself. This process is called phagocytosis, where cells envelop and consume smaller cells or molecules to remove them from the system. Don’t worry! Phagocytosis isn't harmful, but actually helps preserve your grey matter.",
+    "The largest piece of fossilised dinosaur poo discovered is over 30cm long and over two litres in volume. Believed to be a Tyrannosaurus rex turd, the fossilised dung (also named a 'coprolite') is helping scientists better understand what the dinosaur ate.",
+    "The Universe's average colour is called 'Cosmic latte'. In a 2002 study, astronomers found that the light coming from galaxies averaged into a beige colour that’s close to white.",
+    "Animals can experience time differently from humans. To smaller animals, the world around them moves more slowly compared to humans. Salamanders and lizards, for example, experience time more slowly than cats and dogs. This is because the perception of time depends on how quickly the brain can process incoming information.",
+    "Water might not be wet. This is because most scientists define wetness as a liquid’s ability to maintain contact with a solid surface, meaning that water itself is not wet, but can make other objects wet.",
+    "A chicken once lived for 18 months without a head. Mike the chicken's incredible feat was recorded back in the 1940s in the USA. He survived as his jugular vein and most of his brainstem were left mostly intact, ensuring just enough brain function remained for survival. In the majority of cases, a headless chicken dies in a matter of minutes.",
+    "All the world’s bacteria stacked on top of each other would stretch for 10 billion light-years. Together, Earth's 0.001mm-long microbes could wrap around the Milky Way over 20,000 times. ",
+    "Wearing a tie can reduce blood flow to the brain by 7.5 per cent. A study in 2018 found that wearing a necktie can reduce the blood flow to your brain by up to 7.5 per cent, which can make you feel dizzy, nauseous, and cause headaches. They can also increase the pressure in your eyes if on too tight and are great at carrying germs.",
+    "The fear of long words is called Hippopotomonstrosesquippedaliophobia. The 36-letter word was first used by the Roman poet Horace in the first century BCE to criticise those writers with an unreasonable penchant for long words. It was American poet Aimee Nezheukumatathil, possibly afraid of their own surname, who coined the term how we know it in 2000.",
+    "The world’s oldest dog lived to 29.5 years old. While the median age a dog reaches tends to be about 10-15 years, one Australian cattle dog, ‘Bluey’, survived to the ripe old age of 29.5.",
+    "The world’s oldest cat lived to 38 years and three days old. Creme Puff was the oldest cat to ever live. ",
+    "The Sun makes a sound but we can't hear it. In the form of pressure waves, the Sun does make a sound. The wavelength of the pressure waves from the Sun is measured in hundreds of miles, however, meaning they are far beyond the range of human hearing.",
+    "Mount Everest isn't the tallest mountain on Earth. Mauna Kea and Mauna Loa in Hawaii, the twin volcanoes, are taller than Mount Everest due to 4.2km of their heights being submerged underwater. The twin volcanoes measure a staggering 10.2km in total, compared to Everest’s paltry 4.6km.",
+    "Our solar system has a wall. The heliopause – the region of space in which solar wind isn’t hot enough to push back the wind of particles coming from distant stars – is often considered the “boundary wall” of the Solar System and interstellar space.",
+    "Octopuses don’t actually have tentacles. They have eight limbs, but they're arms (for most species). Technically, when talking about cephalopods (octopuses, squids etc), scientists define tentacles as limbs with suckers at their end. Octopus arms have suckers down most of their length.",
+    "Most maps of the world are wrong. On most maps, the Mercator projection – first developed in 1569 – is still used. This method is wildly inaccurate and makes Alaska appear as large as Brazil and Greenland 14 times larger than it actually is. For a map to be completely accurate, it would need to be life-size and round, not flat. ",
+    "NASA genuinely faked part of the Moon landing. While Neil Armstrong's first steps on the lunar surface were categorically not faked, the astronaut quarantine protocol when the astronauts arrived back on Earth was largely just one big show. ",
+    "Comets smell like rotten eggs. A comet smells like rotten eggs, urine, burning matches, and… almonds. Traces of hydrogen sulphide, ammonia, sulphur dioxide, and hydrogen cyanide were all found in the makeup of the comet 67P/Churyumove-Gerasimenko. Promotional postcards were even commissioned in 2016 carrying the pungent scent of a comet.",
+    "Earth’s poles are moving. This magnetic reversal of the North and South Pole has happened 171 times in the past 71 million years. We’re overdue a flip. It could come soon, as the North Pole is moving at around 55 kilometres per year, an increase over the 15km per year up until 1990.",
+    "You can actually die laughing. And a number of people have, typically due to intense laughter causing a heart attack or suffocation. Comedy shows should come with a warning.",
+    "Chainsaws were first invented for childbirth. It was developed in Scotland in the late 18th Century to help aid and speed up the process of symphysiotomy (widening the pubic cartilage) and removal of disease-laden bone during childbirth. It wasn’t until the start of the 20th Century that we started using chainsaws for woodchopping.",
+    "Ants don’t have lungs. They instead breathe through spiracles, nine or ten tiny openings, depending on the species. ",
+    "The T.rex likely had feathers. Scientists in China discovered Early Cretaceous period tyrannosaur skeletons that were covered in feathers. If the ancestors of the T. rex had feathers, the T. rex probably did, too.",
+    "Football teams wearing red kits play better. The colour of your clothes can affect how you’re perceived by others and change how you feel. A review of football matches in the last 55 years, for example, showed that teams wearing a red kit consistently played better in home matches than teams in any other colour. ",
+    "Wind turbines kill between 10,000 and 100,000 birds each year in the UK. Interestingly, painting one of the blades of a wind turbine black can reduce bird deaths by 70 per cent.",
+    "Snails have teeth. Between 1,000 and 12,000 teeth, to be precise. They aren’t like ours, though, so don’t be thinking about snails with ridiculous toothy grins. You’ll find the snail's tiny 'teeth' all over its file-like tongue.",
+    "Sound can be minus decibels. The quietest place on Earth is Microsoft’s anechoic chamber in Redmond, WA, USA, at -20.6 decibels. These anechoic chambers are built out of heavy concrete and brick and are mounted on springs to stop vibrations from getting in through the floor.",
+    "A horse normally has more than one horsepower. A study in 1993 showed that the maximum power a horse can produce is 18,000W, around 24 horsepower.",
+    "Your signature could reveal personality traits. A study in 2016 purports that among men, a larger signature correlates with higher social bravado and, among women, a bigger signature correlates with narcissistic traits.",
+    "One in 18 people have a third nipple. Known as polythelia, the third nipple is caused by a mutation in inactive genes.",
+    "Bananas are radioactive. Due to being rich in potassium, every banana is actually slightly radioactive thanks to containing the natural isotope potassium-40. Interestingly, your body contains around 16mg of potassium-40, meaning you’re around 280 times more radioactive than a banana already. Any excess potassium-40 you gain from a banana is excreted out within a few hours.",
+    "There’s no such thing as a straight line. Zoom in close enough to anything and you’ll spot irregularities. Even a laser light beam is slightly curved.",
+    "Deaf people are known to use sign language in their sleep. A case study of a 71-year-old man with rapid eye movement disorder and a severe hearing impairment showed him using fluent sign language in his sleep, with researchers able to get an idea of what he was dreaming about thanks to those signs.",
+    "Finland is the happiest country on Earth. According to the World Happiness Report, it has been for six years in a row. It’s not really surprising, given that Finland is the home of Santa Claus, reindeer and one sauna for every 1.59 people.",
+    "Hippos can’t swim. Hippos really do have big bones, so big and dense, in fact, that they’re barely buoyant at all. They don’t swim and instead perform a slow-motion gallop on the riverbed or on the sea floor. In fact, hippos can even sleep underwater, thanks to a built-in reflex that allows them to bob up, take a breath, and sink back down without waking.",
+    "The Moon looks upside down in the Southern Hemisphere. Compared to the Northern Hemisphere, anyway. This means that the ‘Man in the Moon’ is upside down in the Southern Hemisphere and looks more like a rabbit.",
+    "You can yo-yo in space. In 2012, NASA astronaut Don Pettit took a yo-yo on board the International Space Station and demonstrated several tricks. It works because a yo-yo mainly relies on the laws of conservation of angular momentum to perform tricks, which, provided you keep the string taut, apply in microgravity too.",
+    "Not only plants photosynthesise. Algae (which are not plants) and some other organisms – including sea slugs and pea aphids – contain chlorophyll and can also take sunlight and turn it into an energy source.",
+    "You can be heavily pregnant and not realise. Cryptic pregnancies aren’t that uncommon, with 1 in 500 not recognised until at least halfway through and 1 in 2,500 not known until labour starts.",
+    "Bacteria on your skin cause your itches. Specifically, bacteria known as Staphylococcus aureus can release a chemical that activates a protein in our nerves. This sends a signal from our skin to our brains, which our brain perceives as an itch.",
+    "Starfish don’t have bodies. Along with other echinoderms (think sea urchins and sand dollars), their entire bodies are technically classed as heads. ",
+    "Somebody has been constipated for 45 days. In 2013, an unfortunate Indian woman had to undergo surgical removal of a faecal mass as large as a football.",
+    "You travel 2.5 million km a day around the Sun without realising. The Earth’s orbit travels around 2.5 million kilometres with respect to the Sun’s centre, and around 19 million km with respect to the centre of the Milky Way.",
+    "Fish form orderly queues in emergencies. When evacuating through narrow spaces in sketchy situations, schools of neon tetra fish queue so that they don’t collide or clog up the line. Scientists interpreted this behaviour as showing that fish can respect social rules even in emergency situations, unlike us humans. ",
+    "There are more bacterial cells in your body than human cells. The average human is around 56 per cent bacteria. This was discovered in a 2016 study and is far less than the earlier estimates of 90 per cent. As bacteria are so light, however, by weight, each person is over 99.7 per cent human.",
+    "Most ginger cats are male. There are roughly three ginger male cats to one ginger female. This is because the ginger gene is found on the X chromosome, meaning female cats would require two copies of the gene to become ginger whilst males only need one.",
+    "Your nails grow faster in hot summer. This is probably due to increased blood supply to the fingertips. It could also be because you’re less stressed while on holiday so less likely to gnaw away at ‘em.",
+    "Insects can fly up to 3.25km above sea level, at least. Alpine bumblebees have been found living as high up as 3.25km above sea level and could even fly in lab conditions that replicate the air density and oxygen levels at 9km – that's just higher than Mount Everest.",
+    "There’s a planet mostly made from diamond. Called 55 Cancri e, it's around twice the size of Earth and some 40 light-years away from us within the Cancer constellation.",
+    "Animals can be allergic to humans. Animals can be allergic to our dead skin cells – dander. These allergic reactions can be just like ours, too, including breathing difficulties and skin irritation.",
+    "Being bored is actually a 'high arousal state' physiologically. This is because when you're bored your heart rate increases.",
+    "Platypuses sweat milk. This is because it doesn't have teats. Milk appears as sweat on a platypus, but it's an aquatic mammal so it doesn't actually sweat at all. ",
+    "LEGO bricks withstand compression better than concrete. An ordinary plastic LEGO brick is able to support the weight of 375,000 other bricks before it fails. This, theoretically, would let you build a tower nearing 3.5km in height. Scaling this up to house-size bricks, however, would cost far too much. ",
+    "LEGO bricks withstand compression better than concrete. An ordinary plastic LEGO brick is able to support the weight of 375,000 other bricks before it fails. This, theoretically, would let you build a tower nearing 3.5km in height. Scaling this up to house-size bricks, however, would cost far too much. ",
+    "It's almost impossible to get too much sugar from fresh fruit. While the sugar in fruit is mostly fructose and glucose (fructose is what's converted into fat in your body), you can't get too much sugar from fresh fruit. Fresh fruit contains a lot of fibre and water which slows down your digestion and makes you feel full.",
+    "You don't like the sound of your own voice because of the bones in your head. This may be because the bones in our head make our voice sound deeper. ",
+    "You don't like the sound of your own voice because of the bones in your head. This may be because the bones in our head make our voice sound deeper. ",
+    "A rainbow on Venus is called a glory. Appearing as a series of coloured concentric rings, these are caused by the interference of light waves within droplets, rather than the reflection, refraction and dispersion of light that makes a rainbow.",
+    "Protons look like peanuts, rugby balls, bagels, and spheres. Protons come in all different shapes and sizes, with their appearance changing based on the speed of smaller particles within them: Quarks. ",
+    "Mirrors facing each other don't produce infinite reflections. Each reflection will be darker than the last and eventually fade into invisibility. Mirrors absorb a fraction of the energy of the light striking them. The total number of reflections mirrors can produce? A few hundred.",
+    "There might be a cure for 'evil'. Well, a cure for psychopathy, anyway. Psychologists argue that aspects of psychopathy can be 'cured' by cognitive behavioural therapy, which is said to reduce violent offences by those with the condition. Preliminary research suggests that computer-based cognitive training could help a psychopath experience empathy and regret, too.",
+    "All mammals get goosebumps. When your hair stands on end, tiny muscles contract at each hair's base which distorts the skin to create goosebumps. This process is called piloerection and is present in all mammals. Hair or fur is used to trap an insulating air layer.",
+    "Football players spit so much because exercise increases the amount of protein in saliva. When you exercise, the amount of protein secreted into the saliva increases. A protein mucus named MUC5B makes your saliva thicker when you're exercising which makes it more difficult to swallow so we tend to spit more. It may occur during exercise because we breathe through our mouths more. MUC5B could activate to stop our mouths from drying out, therefore.",
+    "Some animals display autistic-like traits. Autistic traits in animals include a tendency toward repetitive behaviour and atypical social habits.",
+    "The biggest butterfly in the world has a 31cm wingspan. It belongs to the Queen Alexandra's Birdwing butterfly, which you can find in the forests of the Oro Province, in the east of Papua New Guinea.",
+    "You remember more dreams when you sleep badly. Research suggests that if you sleep badly and wake up multiple times throughout the night you will be more likely to recall the content of any dreams you had. You are also more likely to remember a dream when woken from one.",
+    "You could sweat when you're anxious to alert others. One theory suggests we've evolved to sweat whilst anxious to alert the brains of other people around us so they are primed for whatever it is that's making us anxious. Brain scans have revealed that when you sniff the sweat of a panic-induced person, regions of the brain that handle emotional and social signals light up. When you're anxious your sympathetic nervous system releases hormones including adrenaline, which activates your sweat glands.",
+    "A lightning bolt is five times hotter than the surface of the Sun. The charge carried by a bolt of lightning is so intense that it has a temperature of 30,000°C (54,000°F).",
+    "The longest anyone has held their breath underwater is over 24.5 minutes. The world record for breath-holding underwater was achieved by Croatian Budimir Šobat on 27 March 2021, who held his breath for a total of 24 minutes and 37 seconds. On average, a human can hold their breath between 30-90 seconds.",
+    "The Moon is shrinking. But only very slightly – by about 50m (164ft) in radius over the last several hundred million years. Mysterious seismic activity, known as moonquakes, could be to blame.",
+    "Dogs tilt their heads when you speak to them to better pinpoint familiar words. Your dog is tilting its head when you speak to it to pinpoint where noises are coming from more quickly. This is done to listen out more accurately for familiar words such as 'walkies' and helps them to better understand the tone of your voice. If a dog doesn't tilt its head that often (as those with shorter muzzles might), it's because it relies less on sound and more on sight.",
+    "If the Earth doubled in size, trees would immediately fall over. This is because surface gravity would be doubled. It would also mean dog-size and larger animals would not be able to run without breaking a leg.",
+    "Flamingoes aren’t born pink. They actually come into the world with grey/white feathers and only develop a pinkish hue after starting a diet of brine shrimp and blue-green algae. ",
+    "You can smell ants. Many species of ants release strong-smelling chemicals when they’re angry, threatened or being squished. Trap-jaw ants release a chocolatey smell when annoyed, while citronella ants earn their name from the lemony odour they give off.",
+    "People who eat whatever they want and stay slim have a slow metabolism, not fast. A skinny person tends to have less muscle mass than others, meaning their basal metabolic rate (BMR) is lower than those of a high muscle mass – this gives them a slow metabolism, not a fast one. ",
+    "Earth is 4.54 billion years old. Using radiometric dating, scientists have discovered that the Earth is 4.54 billion years old (give or take 50 million years). This makes our planet half the age of the Milky Way Galaxy (11-13 billion years old) and around a third of the age of the Universe (10-15 billion years old).",
+    "Electrons might live forever. Scientists have estimated the minimum lifetime of the electron is about 6.6 × 1028 years – this is 66,000 ‘yottayears’. Since this is about 5 quintillion times the age of the Universe, even if electrons don’t live forever, they may as well do!",
+    "Beavers don't actually live in dams. Technically, beavers live in a lodge that they build behind a dam, within a deep pool of water. ",
+    "The average dinosaur lifespan was surprisingly small. The Tyrannosaurus rex, for example, reached full size between 16-22 years old and lived up until 27-33. The largest dinosaurs such as the Brontosaurus and Diplodocus tended to live up to between 39-53 years old, maybe reaching the heights of 70.",
+    "Someone left a family photo on the Moon. When Apollo 16 astronaut Charles Duke landed on the Moon in 1972, he decided to leave behind a photo of him, his two sons and his wife. The photo remains on the Moon to this day. ",
+    "It rains methane on Saturn’s largest moon. Titan is the only moon in our Solar System with a dense atmosphere and the only body except Earth with liquid rivers, lakes and seas fed by rainfall. This rainfall isn’t water, though; it's liquid methane.",
+    "Giraffes hum to communicate with each other. It’s thought that the low-frequency humming could be a form of ‘contact call’ between individuals who have been separated from their herd, helping them to find each other in the dark. Some researchers think they sleep talk too.",
+    "Glass sponges can live for 15,000 years. This makes them one of the longest-living organisms on Earth. The immortal jellyfish, however, could theoretically live forever (but scientists aren’t sure).",
+    "You have a 50 per cent chance of sharing a birthday with a friend. In any group of 23 people, two people will share a birthday, according to the maths. To find the probability of everyone in the group having a unique birthday, multiply all 23 probabilities together, giving 0.493. So the probability of a shared birthday is 1 - 0.493 = 0.507, or 50.7 per cent.",
+    "Murder rates rise in summer. Ever feel angry or in a bad mood when the weather is hot? Well, you’re not alone. Violent crime goes up in hotter weather, and in the US, murder rates reportedly rise by 2.7 per cent over the summer.",
+    "'New car smell' is a mix of over 200 chemicals. These include the sickly-sweet, toxic hydrocarbons benzene and toluene.",
+    "‘Sea level’ isn’t actually level. As the strength of the force generated by the Earth’s spin is strongest at the equator, the average sea level bulges outward there, putting it further from the centre of the Earth than at the poles. Differences in the strength of the Earth’s gravity at different points also cause variation.",
+    "You inhale 50 potentially harmful bacteria every time you breathe. Thankfully, your immune system is working hard all the time, so virtually all of these are promptly destroyed without you feeling a thing. Phew.",
+    "You can see stars as they were 4,000 years ago with the naked eye. Without a telescope, all the stars we can see lie within about 4,000 light-years of us. That means at most you’re seeing stars as they were 4,000 years ago, around when the pyramids were being built in Egypt. ",
+    "Plants came before seeds. According to the fossil record, early plants resembled moss and reproduced with single-celled spores. Multicellular seeds didn’t evolve for another 150 million years.",
+    "Plants came before seeds. According to the fossil record, early plants resembled moss and reproduced with single-celled spores. Multicellular seeds didn’t evolve for another 150 million years.",
+    "Our dead cells are eaten by other cells in our body. Don’t worry; it’s meant to happen. When cells inside your body die, they’re scavenged by phagocytes – white blood cells whose job it is to digest other cells.",
+    "Smells can pass through liquid. Please don’t try smelling underwater (your nose will not appreciate it), but smell does protrude through liquid. ",
+    "Bats aren’t blind. Despite the famous idiom, bats can indeed see, but they still use their even more famous echolocation to find prey.",
+    "Pine trees can tell if it's about to rain. Next time you see a pine cone, take a close look. If it’s closed, that’s because the air is humid, which can indicate rain is on its way. ",
+    "You can’t fold a piece of A4 paper more than eight times. As the number of layers doubles each time, the paper rapidly gets too thick and too small to fold. The current world paper-folding record belongs to California high school student Britney Gallivan, who in 2002 managed to fold a 1.2km-long piece of tissue paper 12 times.",
+    "Laughing came before language. How do we know? Some researchers tickled baby apes, which, beyond being adorable, showed that they share the same structure as ours and likely arose in our common ancestors millions of years ago. Language came about much later. ",
+    "Your brain burns 400-500 calories a day. That’s about a fifth of your total energy requirements. Most of this is concerned with the largely automatic process of controlling your muscles and processing sensory input, although some studies show solving tricky problems increases your brain's metabolic requirements too.",
+
+  ];
+
+  // Facts number
+  let random_facts_number = Math.floor(Math.random() * facts.length);
+
+  return facts[random_facts_number];
+}
+</script>
+
+
+
+<form name="myForm" action="/ChatSTS(thinking).php.txt" onsubmit="return validateForm()" method="post">
+  Your input: <input type="text" id="002" autocomplete="on|
+  ">
+  <input type="submit" value="Submit">
+</form>
+
+<div id="001">
+Hi!
+</div>
+
+</body>
+</html> 
