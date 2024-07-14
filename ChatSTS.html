@@ -220,7 +220,7 @@ function facts() {
 
 
 
-<form name="myForm" onsubmit="return validateForm()">
+<form name="myForm" onsubmit="event.preventDefault(); validateForm()">
   Your input: <input type="text" id="002" autocomplete="on|
   ">
   <input type="submit" value="Submit">
